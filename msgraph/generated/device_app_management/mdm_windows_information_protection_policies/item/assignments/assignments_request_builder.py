@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     from .....models.targeted_managed_app_policy_assignment import TargetedManagedAppPolicyAssignment
     from .....models.targeted_managed_app_policy_assignment_collection_response import TargetedManagedAppPolicyAssignmentCollectionResponse
     from .count.count_request_builder import CountRequestBuilder
-    from .item.targeted_managed_app_policy_assignment_item_request_builder import TargetedManagedAppPolicyAssignmentItemRequestBuilder
+    from .item.app_policy_builder import TargetedManagedAppPolicyAssignmentItemRequestBuilder
 
 class AssignmentsRequestBuilder(BaseRequestBuilder):
     """
@@ -37,7 +37,7 @@ class AssignmentsRequestBuilder(BaseRequestBuilder):
         """
         if not targeted_managed_app_policy_assignment_id:
             raise TypeError("targeted_managed_app_policy_assignment_id cannot be null.")
-        from .item.targeted_managed_app_policy_assignment_item_request_builder import TargetedManagedAppPolicyAssignmentItemRequestBuilder
+        from .item.app_policy_builder import TargetedManagedAppPolicyAssignmentItemRequestBuilder
 
         url_tpl_params = get_path_parameters(self.path_parameters)
         url_tpl_params["targetedManagedAppPolicyAssignment%2Did"] = targeted_managed_app_policy_assignment_id
