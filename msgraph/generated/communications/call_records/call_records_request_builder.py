@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from .count.count_request_builder import CountRequestBuilder
     from .item.call_record_item_request_builder import CallRecordItemRequestBuilder
     from .direct_calls.direct_calls_builder import MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
-    from .pstn_calls.microsoft_graph_call_records_get_pstn_calls_with_from_date_time_with_to_date_time_request_builder import MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+    from .pstn_calls.pstn_calls_builder import MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
 
 class CallRecordsRequestBuilder(BaseRequestBuilder):
     """
@@ -92,7 +92,7 @@ class CallRecordsRequestBuilder(BaseRequestBuilder):
             raise TypeError("from_date_time cannot be null.")
         if not to_date_time:
             raise TypeError("to_date_time cannot be null.")
-        from .pstn_calls.microsoft_graph_call_records_get_pstn_calls_with_from_date_time_with_to_date_time_request_builder import MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+        from .pstn_calls.pstn_calls_builder import MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
 
         return MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(self.request_adapter, self.path_parameters, from_date_time, to_date_time)
     
