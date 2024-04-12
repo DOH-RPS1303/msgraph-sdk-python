@@ -11,7 +11,7 @@ from typing import Any, Callable, Dict, List, Optional, TYPE_CHECKING, Union
 
 if TYPE_CHECKING:
     from ....models.o_data_errors.o_data_error import ODataError
-    from .get_user_ids_with_flagged_app_registration_get_response import GetUserIdsWithFlaggedAppRegistrationGetResponse
+    from .flagged_users import GetUserIdsWithFlaggedAppRegistrationGetResponse
 
 class GetUserIdsWithFlaggedAppRegistrationRequestBuilder(BaseRequestBuilder):
     """
@@ -42,7 +42,7 @@ class GetUserIdsWithFlaggedAppRegistrationRequestBuilder(BaseRequestBuilder):
         }
         if not self.request_adapter:
             raise Exception("Http core is null") 
-        from .get_user_ids_with_flagged_app_registration_get_response import GetUserIdsWithFlaggedAppRegistrationGetResponse
+        from .flagged_users import GetUserIdsWithFlaggedAppRegistrationGetResponse
 
         return await self.request_adapter.send_async(request_info, GetUserIdsWithFlaggedAppRegistrationGetResponse, error_mapping)
     
