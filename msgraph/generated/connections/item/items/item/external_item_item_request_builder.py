@@ -13,7 +13,7 @@ if TYPE_CHECKING:
     from .....models.external_connectors.external_item import ExternalItem
     from .....models.o_data_errors.o_data_error import ODataError
     from .activities.activities_request_builder import ActivitiesRequestBuilder
-    from .microsoft_graph_external_connectors_add_activities.microsoft_graph_external_connectors_add_activities_request_builder import MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder
+    from .microsoft_graph_external_connectors_add_activities.activity_builder import MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder
 
 class ExternalItemItemRequestBuilder(BaseRequestBuilder):
     """
@@ -152,7 +152,7 @@ class ExternalItemItemRequestBuilder(BaseRequestBuilder):
         """
         Provides operations to call the addActivities method.
         """
-        from .microsoft_graph_external_connectors_add_activities.microsoft_graph_external_connectors_add_activities_request_builder import MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder
+        from .microsoft_graph_external_connectors_add_activities.activity_builder import MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder
 
         return MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder(self.request_adapter, self.path_parameters)
     
