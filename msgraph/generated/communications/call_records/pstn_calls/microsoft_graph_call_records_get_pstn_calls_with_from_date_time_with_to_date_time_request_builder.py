@@ -12,7 +12,7 @@ from typing import Any, Callable, Dict, List, Optional, TYPE_CHECKING, Union
 
 if TYPE_CHECKING:
     from ....models.o_data_errors.o_data_error import ODataError
-    from .get_pstn_calls_with_from_date_time_with_to_date_time_get_response import GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse
+    from .pstn_calls_response import GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse
 
 class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(BaseRequestBuilder):
     """
@@ -48,7 +48,7 @@ class MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequest
         }
         if not self.request_adapter:
             raise Exception("Http core is null") 
-        from .get_pstn_calls_with_from_date_time_with_to_date_time_get_response import GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse
+        from .pstn_calls_response import GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse
 
         return await self.request_adapter.send_async(request_info, GetPstnCallsWithFromDateTimeWithToDateTimeGetResponse, error_mapping)
     
