@@ -92,7 +92,7 @@ class CallRecordsRequestBuilder(BaseRequestBuilder):
             raise TypeError("from_date_time cannot be null.")
         if not to_date_time:
             raise TypeError("to_date_time cannot be null.")
-        from .microsoft_graph_call_records_get_pstn_calls_with_from_date_time_with_to_date_time.microsoft_graph_call_records_get_pstn_calls_with_from_date_time_with_to_date_time_request_builder import MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+        from .pstn_calls.microsoft_graph_call_records_get_pstn_calls_with_from_date_time_with_to_date_time_request_builder import MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
 
         return MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(self.request_adapter, self.path_parameters, from_date_time, to_date_time)
     
