@@ -12,7 +12,7 @@ from typing import Any, Callable, Dict, List, Optional, TYPE_CHECKING, Union
 
 if TYPE_CHECKING:
     from ....models.o_data_errors.o_data_error import ODataError
-    from .get_direct_routing_calls_with_from_date_time_with_to_date_time_get_response import GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
+    from .direct_calls_response import GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
 
 class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(BaseRequestBuilder):
     """
@@ -48,7 +48,7 @@ class MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTi
         }
         if not self.request_adapter:
             raise Exception("Http core is null") 
-        from .get_direct_routing_calls_with_from_date_time_with_to_date_time_get_response import GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
+        from .direct_calls_response import GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse
 
         return await self.request_adapter.send_async(request_info, GetDirectRoutingCallsWithFromDateTimeWithToDateTimeGetResponse, error_mapping)
     
