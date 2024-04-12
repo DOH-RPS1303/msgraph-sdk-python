@@ -14,7 +14,7 @@ if TYPE_CHECKING:
     from .....models.windows_information_protection_app_locker_file import WindowsInformationProtectionAppLockerFile
     from .....models.windows_information_protection_app_locker_file_collection_response import WindowsInformationProtectionAppLockerFileCollectionResponse
     from .count.count_request_builder import CountRequestBuilder
-    from .item.windows_information_protection_app_locker_file_item_request_builder import WindowsInformationProtectionAppLockerFileItemRequestBuilder
+    from .item.app_lock_builder import WindowsInformationProtectionAppLockerFileItemRequestBuilder
 
 class ProtectedAppLockerFilesRequestBuilder(BaseRequestBuilder):
     """
@@ -37,7 +37,7 @@ class ProtectedAppLockerFilesRequestBuilder(BaseRequestBuilder):
         """
         if not windows_information_protection_app_locker_file_id:
             raise TypeError("windows_information_protection_app_locker_file_id cannot be null.")
-        from .item.windows_information_protection_app_locker_file_item_request_builder import WindowsInformationProtectionAppLockerFileItemRequestBuilder
+        from .item.app_lock_builder import WindowsInformationProtectionAppLockerFileItemRequestBuilder
 
         url_tpl_params = get_path_parameters(self.path_parameters)
         url_tpl_params["windowsInformationProtectionAppLockerFile%2Did"] = windows_information_protection_app_locker_file_id
